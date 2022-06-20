@@ -1,17 +1,23 @@
  
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Contact from './Contact';
-import Home from './Home';
-import About from './About';
+import Dashboard from './Dashboard';
+import Accounts from './Accounts';
+import Notifications from './Notifications';
+import Withdrawals from './Withdrawals';
+import NewsHeadlines from './NewsHeadlines';
 import Error from './Error';
 
 function App() {
   return <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/contact" element={<Contact/>} />
+      <Route path="/" element={<Dashboard/>} />
+     
+      <Route path="/accounts" element={<Accounts/>} />
+      <Route path="/notifications" element={<Notifications/>} />
+      <Route path="/withdrawals" element={<Withdrawals/>} />
+      <Route path="/newsheadlines" element={<NewsHeadlines/>} />
+
       <Route path="*" element={<Error/>} />
      
   

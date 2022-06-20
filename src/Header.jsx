@@ -1,15 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import { Link, NavLink } from "react-router-dom";
+import Test from './test';
 
+const Header = (props) => {
+    const {userName} = props;
 
-const Header = () => {
     const [nav, setNav] = useState(true)
     const handleNav = () => {
-      setNav(!nav)
-      console.log("hey")
+        setNav(!nav)
+        console.log("hey")
     }
-  
+
     return (
         <>
             <header>
@@ -38,10 +40,10 @@ const Header = () => {
                                     </div>
                                     <div className='hidden lg:block lg:ml-10'>
                                         <div className='flex space-x-4'>
-                                            <NavLink to= {"/"}
+                                            <NavLink to={"/"}
                                                 className='text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'>
                                                 Dashboard </NavLink>
-                                            <NavLink to= {"/accounts"}
+                                            <NavLink to={"/accounts"}
                                                 className=' text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'>
                                                 Accounts </NavLink>
                                             <NavLink to={"/notifications"}
@@ -57,7 +59,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div onClick={handleNav} className={!nav?'lg:hidden' : 'lg:hidden'} >
+                                <div onClick={handleNav} className={!nav ? 'lg:hidden' : 'lg:hidden'} >
                                     {/* <!-- Mobile menu button --> */}
                                     <button id="mobile-menu-button" type="button"
                                         className="bg-indigo-600 p-2 rounded-md inline-flex items-center justify-center text-indigo-200 hover:text-white hover:bg-indigo-500 hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"
@@ -89,7 +91,7 @@ const Header = () => {
                                                 </button>
                                             </div>
                                             <div id="user-menu-panel"
-                                                className= {!nav?'origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none':'hidden'}
+                                                className={!nav ? 'origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none' : 'hidden'}
                                                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                                 tabIndex="-1">
 
@@ -103,16 +105,16 @@ const Header = () => {
                             </div>
                         </div>
                         {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-                        <div className= {!nav?'lg:hidden':'hidden'} id="mobile-menu">
+                        <div className={!nav ? 'lg:hidden' : 'hidden'} id="mobile-menu">
                             <div className="px-2 pt-2 pb-3 space-y-1">
                                 {/* <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" --> */}
-                                <NavLink to= {"/"}
+                                <NavLink to={"/"}
                                     className="text-white hover:bg-indigo-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium">
                                     Dashboard </NavLink>
-                                <NavLink to= {"/accounts"} className=" text-white block rounded-md py-2 px-3 text-base font-medium"
+                                <NavLink to={"/accounts"} className=" text-white block rounded-md py-2 px-3 text-base font-medium"
                                     aria-current="page">
                                     Accounts </NavLink>
-                                <NavLink to= {"/notifications"}
+                                <NavLink to={"/notifications"}
                                     className="text-white hover:bg-indigo-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium">
                                     Notifications </NavLink>
                                 <NavLink to={"/withdrawals"}
@@ -141,14 +143,14 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
 
                     </nav>
-                    <header class="py-10">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h1 class="text-3xl font-bold text-white">Dashboard</h1>
-				</div>
-			</header>
+                    <header className="py-10">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <h1 className="text-3xl font-bold text-white">{props.headLine}</h1>
+                        </div>
+                    </header>
                 </div>
             </header>
         </>

@@ -4,7 +4,7 @@ import Header from './Header'
 const Notifications = () => {
   return (
      <>
-      <Header />
+      <Header headLine="Notifications" />
     <div>Notifications</div>
     </>
   )

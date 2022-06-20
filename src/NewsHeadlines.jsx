@@ -3,7 +3,7 @@ import Header from './Header'
 const NewsHeadlines = () => {
   return (
     <>
-        <Header/>
+        <Header headLine="News Headlines"/>
         <h1>newsheadlines page</h1>
 
     </>

@@ -4,7 +4,7 @@ import Header from './Header'
 const Withdrawals = () => {
   return (
     <>
-    <Header/>
+    <Header headLine="Withdrawals"/>
     <h1>Withdrawals page</h1>
     </>
   )

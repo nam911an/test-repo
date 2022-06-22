@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './Home'
+import Header from './Header'
 
 const About = () => {
   return (
       <>
-      <Home />
+      <Header />
       <div>This is about</div>
       </>
   )

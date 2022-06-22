@@ -1,26 +1,16 @@
 import React from 'react'
-import {Link, NavLink} from "react-router-dom";
+import Header from './Header';
 import './App.css';
-
+import Hero from './Hero';
+import './grid.css';
 const Home = () => {
   return (
     <>
-        <header>
-            <a href='#'>Logo</a>
-            <nav> 
-                <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                    <NavLink to={"/about"}>About</NavLink>                        </li>
-                    <li>
-                    <NavLink to={"/contact"}>Contact</NavLink>      
-
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        
+        <Header />
+      <div>This is h</div>
+      <Hero/>
+                   
     </>
   )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
-import Home from './Home'
+import Header from './Header'
+
 
 const Contact = () => {
   return (
       <>
-      <Home/>
-    <div>this is Contact</div>
+    <Header/>
+        <div className=''>this is Contact</div>
     
     </>
   )

@@ -1,16 +1,17 @@
 import React from 'react'
 import './App.css';
+import {Link, NavLink} from "react-router-dom";
 
 
 const Header = () => {
     return (
         <>
             <header>
-                <a href='#'>Logo</a>
+               <div className='cursor-pointer'>Logo</div>
                 <nav>
-                    <ul>
+                    <ul className='p-4'>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to={"/"}>Home</NavLink>
                         </li>
                         <li>
                         <NavLink to={"/about"}>About</NavLink>                        </li>

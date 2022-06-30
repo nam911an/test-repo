@@ -3,7 +3,7 @@ import Header from './Header'
 const Accounts = () => {
   return (
     <>
-        <Header  headLine="Accounts" />
+        <Header headLine="Accounts" />
         <div>Accounts</div>
     </>
   )

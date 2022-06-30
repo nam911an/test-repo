@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState,  } from 'react'
 import './App.css';
-import { Link, NavLink } from "react-router-dom";
-import Test from './test';
+import {  NavLink } from "react-router-dom";
+
 
 const Header = (props) => {
-    const {userName} = props;
+    
 
     const [nav, setNav] = useState(true)
     const handleNav = () => {
         setNav(!nav)
         console.log("hey")
     }
+   
 
     return (
         <>
@@ -95,8 +96,8 @@ const Header = (props) => {
                                                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                                 tabIndex="-1">
 
-                                                <a href="#" className="block py-2 px-4 text-sm text-gray-700" role="menuitem"
-                                                    tabIndex="-1" id="user-menu-item-2"> Sign out </a>
+                                                {/* <a href="#" className="block py-2 px-4 text-sm text-gray-700" role="menuitem"
+                                                    tabIndex="-1" id="user-menu-item-2"> Sign out </a> */}
                                             </div>
                                         </div>
                                     </div>
@@ -137,9 +138,9 @@ const Header = (props) => {
                                     </div>
                                 </div>
                                 <div className="mt-3 px-2 space-y-1">
-                                    <a href="#"
+                                    {/* <a href="#"
                                         className="cursor-pointer block rounded-md py-2 px-3 text-base font-medium text-white hover:bg-indigo-500 hover:bg-opacity-75">
-                                        Sign out </a>
+                                        Sign out </a> */}
                                 </div>
                             </div>
                         </div>
